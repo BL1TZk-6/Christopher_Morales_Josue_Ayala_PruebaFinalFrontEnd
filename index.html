@@ -27,7 +27,7 @@
   <main class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h1 class="h4 mb-0" id="pageTitle">Listado de Premios</h1>
-      <button class="btn btn-primary" id="btnAdd"
+      <button class="btn btn-warning" id="btnAdd"
               data-bs-toggle="modal" data-bs-target="#itemModal">
         <i class="bi bi-plus-lg me-1"></i> Agregar
       </button>
@@ -65,32 +65,43 @@
         <form id="itemForm">
           <input type="hidden" id="itemId" name="id" />
 
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="itemName" class="form-label">Nombre <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="itemName" name="name" required />
+            <div class="modal-body">
+                <div class="mb-3">
+                <label for="itemName" class="form-label">Nombre <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="itemName" name="name" required>
             </div>
 
             <div class="mb-3">
-              <label for="itemCategory" class="form-label">Categoria</label>
-              <textarea class="form-control" id="itemCategory" name="category" rows="3"></textarea>
+              <label for="itemCategory" class="form-label">Categoria<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="itemCategory" name="category" required>
             </div>
 
             <div class="mb-3">
-                <label for="itemYear" class="form-label">Año Premio</label>
-                <input type="date" name="year" id="itemName">
+                <label for="itemYear" class="form-label">Año Premio<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="itemYear" name="year" required>
             </div>
-
-            
 
             <div class="mb-3">
-              <label for="itemStatus" class="form-label">Estado <span class="text-danger">*</span></label>
-              <select class="form-select" id="itemStatus" name="status" required>
-                <option value="" selected hidden>Seleccione...</option>
-                <option value="ACTIVO">Activo</option>
-                <option value="INACTIVO">Inactivo</option>
-              </select>
+                <label for="itemYear" class="form-label">Resultado<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="itemResult" name="Result" required>
             </div>
-          </div>
+
+            <div class="mb-3">
+                <label for="itemCategory" class="form-label">Fecha Registro<span class="text-danger">*</span></label>
+                <input type="date" class="form-label" id="fecha_registro" name="fecha_registro" required>
+            </div>
+        
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-success" id="saveItem">Guardar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script type="module" src="js/Controller/PremiosController.js"></script>
+  <script type="module" src="js/Service/PremiosService.js"></script>
 </body>
 </html>
