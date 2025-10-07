@@ -1,0 +1,30 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbf9f5; 
+    color: #333;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.contenedor {
+    max-width: 1440px; 
+    margin: 50px auto; 
+    padding: 0 40px; 
+    margin-top: 50px; 
+}
+
+
+.barra-superior {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 15px 25px; 
+    border-radius: 16px; 
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); 
+    border: 1px solid #e0e0e0; 
+}
